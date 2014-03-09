@@ -24,7 +24,7 @@
       {% for post in g.docs('posts') %}
         <section>
           <h2><a href="{{post.url.path}}">{{post.title}}</a></h2>
-          {{post.html()|safe}}
+          {{post.html|safe}}
         </section>
       {% endfor %}
 
