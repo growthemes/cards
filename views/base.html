@@ -1,13 +1,13 @@
 <!doctype html>
 <meta charset="utf-8">
-<title>{{g.doc.title}}</title>
+<title>{{doc.title}}</title>
 <link href="//fonts.googleapis.com/css?family=Roboto:400,300,100" rel="stylesheet">
 <link href="/static/main.css" rel="stylesheet">
 <div class="wrap">
   <header>
     <nav class="navbar navbar-default navbar-inverse" role="navigation">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/">{{g.pod.title}}</a>
+        <a class="navbar-brand" href="/">{{podspec.title}}</a>
       </div>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
         <ul class="nav navbar-nav">
@@ -24,7 +24,7 @@
       {% for post in g.docs('posts') %}
         <section>
           <h2><a href="{{post.url.path}}">{{post.title}}</a></h2>
-          {{post.html|safe}}
+          {{post.html()|safe}}
         </section>
       {% endfor %}
 

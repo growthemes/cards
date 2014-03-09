@@ -2,7 +2,7 @@
 
 {% block main %}
   <section>
-    <h2>{{g.doc.title}}</h2>
-    {{g.doc.html|safe}}
+    <h2>{{doc.title}}</h2>
+    {{doc.html()|safe}}
   </section>
 {% endblock %}
