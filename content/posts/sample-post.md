@@ -1,5 +1,8 @@
 ---
 $title: Another sample post
+$date: 2014-02-14
+$dates:
+  published: 2014-02-14
 ---
 ### Si intus poenae contineat quaeque trahit
 
