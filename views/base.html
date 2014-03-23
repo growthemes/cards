@@ -21,13 +21,18 @@
   <main>
     {% block main %}
 
-      {% set posts = g.docs('posts', order_by='date') | reverse() %}
+      {% set posts = g.docs('posts', order_by='date')[-3:] | reverse() %}
       {% for post in posts %}
         <section>
           <h2><a href="{{post.url.path}}">{{post.title}}</a></h2>
           {{post.html|safe}}
         </section>
       {% endfor %}
+
+      <section>
+        {% set archive_doc = g.doc('/content/pages/archive.md') %}
+        See more in the <a href="{{archive_doc.url.path}}" title="post archive">archive</a>.
+      </section>
 
     {% endblock %}
   </main>
