@@ -21,7 +21,8 @@
   <main>
     {% block main %}
 
-      {% for post in g.docs('posts') %}
+      {% set posts = g.docs('posts', order_by='date') | reverse() %}
+      {% for post in posts %}
         <section>
           <h2><a href="{{post.url.path}}">{{post.title}}</a></h2>
           {{post.html|safe}}
