@@ -1,5 +1,8 @@
 ---
-$title: Hello World!
+$title@: Hello World!
+$date: 2014-03-17
+$dates:
+  published: 2014-03-17
 ---
 Lorem markdownum ulterius: data *vires curvantur*, aliquo et fuerat sustinet
 **usus**, disparibus tui ullas nota ramis quas. In sidera atria Alcyone,

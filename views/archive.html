@@ -1,0 +1,21 @@
+{% extends "/views/base.html" %}
+
+{% block main %}
+
+  {% set posts = g.docs('posts', order_by='date') %}
+
+  {% for year, year_group in posts|groupby('date.year') | reverse() %}
+    <section>
+      <h2>{{year}}</h2>
+      {% for month, list in year_group|groupby('date.month') | reverse() %}
+        <h3>{{ list[0].date.strftime('%B') }}</h3>
+        <ul>
+        {% for post in list %}
+          <li><a href="{{post.url.path}}">{{post.title}}</a>
+        {% endfor %}
+        </ul>
+      {% endfor %}
+    </section>
+  {% endfor %}
+
+{% endblock %}
